@@ -1,0 +1,8 @@
+#TAG RELEASE
+svn copy file:///usr/local/svn/repo/dbdMVC/trunk file:///usr/local/svn/repo/dbdMVC/tags/dbdMVC-1.6
+
+#REMOTE SVN DOWNLOAD
+svn export svn+ssh://dbdmvc.com/usr/local/svn/repo/dbdMVC/tags/dbdMVC-1.6 dbdMVC-1.6
+
+#REMOTE WORKING COPY
+svn co svn+ssh://will@dbdmvc.com/usr/local/svn/repo/dbdMVC/trunk dbdMVC

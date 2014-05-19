@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ${#} -lt 1 ]
+then
+    echo "USAGE: ${0} VERSION_NUM"
+    exit 1
+fi
+
+ver="dbdMVC2-${1}"
+dl_dir="/var/www/vhosts/dbdmvc.com/dbdApp/assets/download/"
+
+#rm -rf ${dl_dir}*
+svn export file:///var/svn/dbdMVC2/tags/${ver} ${dl_dir}${ver}
+tar -czv --directory ${dl_dir} -f ${dl_dir}${ver}.tar.gz ${ver}
+zip ${dl_dir}${ver}.zip ${dl_dir}${ver}/*

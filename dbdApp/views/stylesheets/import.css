@@ -1,0 +1,8 @@
+@variables
+{
+	bgc: #fff;
+}
+@import "default.css";
+@import "content.css";
+@import "hide.css";
+/*@debug*/

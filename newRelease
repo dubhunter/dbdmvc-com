@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ ${#} -lt 1 ]
+then
+    echo "USAGE: ${0} VERSION_NUM"
+    exit 1
+fi
+
+dir="/var/www/vhosts/dbdmvc.com/"
+
+${dir}scripts/genDocsHTML
+${dir}scripts/genDocsPDF
+pushd /var/www/dbdMVC2
+git commit -am "New Docs"
+git push origin master
+git tag dbdMVC2-${1}
+#svn ci -m "New Docs" /var/www/dbdMVC2/
+#svn copy file:///var/svn/dbdMVC2/trunk file:///var/svn/dbdMVC2/tags/dbdMVC2-${1} -m "Tagging official release ${1}"
+${dir}scripts/refreshDownloads ${1}

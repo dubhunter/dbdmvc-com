@@ -1,0 +1,16 @@
+#!/bin/bash
+
+app_dir="/var/www/dbdMVC2"
+doc_dir="/var/www/vhosts/dbdmvc.com/dbdApp/assets/documentation/"
+excludes=".svn/,Smarty-2.6.26/,FirePHPCore-0.3.2/"
+php_doc="/usr/bin/phpdoc"
+
+#prepare public pdf docs
+rm -rf ${doc_dir}pdf/public/*
+php ${php_doc} -t ${doc_dir}pdf/public -d ${app_dir} -i ${excludes} -o PDF:default:default -ti dbdMVC Public Documentation -dn dbdMVC
+cp ${doc_dir}pdf/public/documentation.pdf ${app_dir}/help/docs/public.pdf
+
+#prepare private pdf docs
+rm -rf ${doc_dir}pdf/private/*
+php ${php_doc} -t ${doc_dir}pdf/private -d ${app_dir} -i ${excludes} -o PDF:default:default -ti dbdMVC Private Documentation -dn dbdMVC -pp on
+cp ${doc_dir}pdf/private/documentation.pdf ${app_dir}/help/docs/private.pdf

@@ -1,0 +1,54 @@
+/**** MAIN CONTENT CSS ****/
+
+#pageAll
+{
+	width: 728px;
+	margin: 20px auto 20px auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+	background: #fff url(http://dbdmvc.com/images/gfx/body_bg.gif) repeat-x left bottom;
+}
+
+#pageHead h1 a
+{
+	background: url(http://dbdmvc.com/images/gfx/dbd_mvc_logo.jpg) no-repeat center top;
+	display: block;
+	width: 283px;
+	height: 155px;
+	margin: 0 auto;
+}
+
+#pageHead h2
+{
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	color: #ba1319;
+}
+
+#pageBody
+{
+	background: url(http://dbdmvc.com/images/gfx/dbd_logo.jpg) no-repeat center bottom;
+	padding-bottom: 80px;
+}
+
+#pageBody p
+{
+	margin-bottom: 10px;
+}
+
+#pageBody ul
+{
+	margin-bottom: 15px;
+}
+
+#pageBody li
+{
+	list-style: none;
+}
+
+#pageFoot
+{
+	margin-top: 15px;
+	text-align: center;
+	font-size: 0.8em;
+}

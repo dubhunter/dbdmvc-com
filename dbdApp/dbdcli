@@ -1,0 +1,4 @@
+#!/usr/local/bin/php -q
+<?php
+require_once("../htdocs/index.php");
+?>
